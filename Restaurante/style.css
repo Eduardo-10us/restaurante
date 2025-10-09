@@ -1,0 +1,39 @@
+body{
+    background-color:#90EE90;
+
+
+}
+#container{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+
+}
+#titulo h2{
+    text-align:center;
+
+}
+
+#menu ul{
+    list-style:none;
+}
+#menu ul li{
+    display:inline; 
+    padding: 10px;
+}
+#capa{
+    width:500px;
+}
+
+#capa img{
+    width:500px;
+    height: 200px;
+}
+.imagens_promo h3{
+    text-align:center;
+    
+}
+.imagens_promo img{
+    width:200px;
+    height:200px;
+}
+
