@@ -1,0 +1,84 @@
+body{
+    background-color:#aadaaa;
+
+
+}
+#container{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+
+}
+#titulo h2{
+    text-align:center;
+
+}
+
+#menu ul{
+    list-style:none;
+}
+#menu ul li{
+    display:inline; 
+    padding: 10px;
+}
+
+#capa{
+    width:auto;
+}
+
+#capa img{
+    width:100%;
+    height: 800px;
+}
+
+.imagens_promo h3{
+    text-align:center;
+    
+}
+.imagens_promo img{
+    width:340px;
+    height:300px;
+    
+
+}
+.imagens_promo {
+    display:inline;
+    padding:20px;
+    margin:30px;
+
+} 
+#central {
+    text-align:center;
+
+
+}
+.rodape2 {
+    display:inline-block;
+    padding:20px;
+    height:150px;
+}
+.rodape2 img {
+    width:60px;
+    height:60px;
+    
+
+}
+.rodape2 ul {
+    list-style:none;
+}
+#rodape{
+    text-align:center;
+    background-color:rgb(161, 34, 34);
+    color:white; 
+    height: 240px; 
+
+}
+#rodape3{
+    background-color:rgb(49, 9, 9);
+    height: 100px;
+    
+}
+
+    
+
+
+
