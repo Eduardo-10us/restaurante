@@ -55,6 +55,8 @@ body{
     display:inline-block;
     padding:20px;
     height:150px;
+    vertical-align:top;
+    width: 400px;
 }
 .rodape2 img {
     width:60px;
@@ -66,17 +68,43 @@ body{
     list-style:none;
 }
 #rodape{
-    text-align:center;
     background-color:rgb(161, 34, 34);
     color:white; 
-    height: 240px; 
+    height: 250px; 
 
 }
 #rodape3{
     background-color:rgb(49, 9, 9);
     height: 100px;
+    text-align: center;
+    
     
 }
+#menu ul li{
+    display:inline;
+    padding:20px;
+
+}
+#menu ul li a{
+    text-decoration: none;
+    color: aquamarine;
+}
+.imagens_produtos img {
+    width:300px;
+    height:300px;
+    padding:100x;
+}
+.imagens_produtos {
+    display:inline-block;
+    
+}
+#produtos{
+    text-align: center;
+} 
+    
+
+
+
 
     
 
