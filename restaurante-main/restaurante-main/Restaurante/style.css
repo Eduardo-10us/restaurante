@@ -100,7 +100,15 @@ body{
 }
 #produtos{
     text-align: center;
-} 
+}
+.y {
+    padding:50px;
+}
+.y img {
+    height:200px ;
+
+}
+
     
 
 
