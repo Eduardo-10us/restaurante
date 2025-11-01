@@ -4,11 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <title>Document</title><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script>
+    
+        function limpa_formulário_cep() {
+                //Limpa valores do formulário de cep.
+                document.getElementById('rua').value=("");
+                document.getElementById('bairro').value=("");
+                document.getElementById('cidade').value=("");
+                document.getElementById('uf').value=("");
+                
+        }
+    
+        function meu_callback(conteudo) {
+            if (!("erro" in conteudo)) {
+                //Atualiza os campos com os valores.
+                document.getElementById('rua').value=(conteudo.logradouro);
+                document.getElementById('bairro').value=(conteudo.bairro);
+                document.getElementById('cidade').value=(conteudo.localidade);
+                document.getElementById('uf').value=(conteudo.uf);
+                
+            } //end if.
+            else {
+                //CEP não Encontrado.
+                limpa_formulário_cep();
+                alert("CEP não encontrado.");
+            }
+        }
+            
+        function pesquisacep(valor) {
+    
+            //Nova variável "cep" somente com dígitos.
+            var cep = valor.replace(/\D/g, '');
+    
+            //Verifica se campo cep possui valor informado.
+            if (cep != "") {
+    
+                //Expressão regular para validar o CEP.
+                var validacep = /^[0-9]{8}$/;
+    
+                //Valida o formato do CEP.
+                if(validacep.test(cep)) {
+    
+                    //Preenche os campos com "..." enquanto consulta webservice.
+                    document.getElementById('rua').value="...";
+                    document.getElementById('bairro').value="...";
+                    document.getElementById('cidade').value="...";
+                    document.getElementById('uf').value="...";
+                    
+    
+                    //Cria um elemento javascript.
+                    var script = document.createElement('script');
+    
+                    //Sincroniza com o callback.
+                    script.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
+    
+                    //Insere script no documento e carrega o conteúdo.
+                    document.body.appendChild(script);
+    
+                } //end if.
+                else {
+                    //cep é inválido.
+                    limpa_formulário_cep();
+                    alert("Formato de CEP inválido.");
+                }
+            } //end if.
+            else {
+                //cep sem valor, limpa formulário.
+                limpa_formulário_cep();
+            }
+        };
+    
+        </script>
     <div id="container">
         <div id="titulo">
     <h2>Restaurante SushiBom</h2>
 </div>
-
+     <div class="contatos1">
     <div id="menu">
     <nav>
         <ul>
@@ -18,40 +90,58 @@
             <li></li><a href="contatos.html">Contatos</li></a>
         </ul>
     </nav>
+ </div>
 </div>
-
-<label for="nome">Nome</label>
-<input type="text" placeholder="Digite seu nome" name="nome" id="nome">
-<label>Endereço Rua</label>
-<input type="text" placeholder="" name="nome">
-<label>Número</label>
-<input type="number" name="número">
-<label>Complemento</label>
-<input type="text" name="Complemento">
-<label>bairro</label>
-<input type="text" name="bairro">
-
-<label>Naturalidade</label>
-<select name="estado">
-        <option value="Rio de Janeiro">RJ</option>
-        <option value="sao paulo">SP</option>
-        <option value="Espirito Santo">ES</option>
-        <option value="Minas Gerais">MG</option>
-</select>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<form method="post">
+    
+    <label for="nome">Nome</label>
+    <input type="text" placeholder="Digite seu nome" name="nome" id="nome">
+    
+    
+    
+    <label>Rua</label>
+    <input type="text" placeholder="" name="nome" id="nome">
+    
+    
+    
+    <label>Número</label>
+    <input type="number" name="número" id="número">
+    
+    
+    
+    <label>Complemento</label>
+    <input type="text" name="Complemento" id="complementp">
+    
+    
+    
+    <label>Email</label>
+    <input type="email" name="email" id="email">
+    
+    
+    
+    <label>telefone</label>
+    <input type="text" name="text" id="telefone">
+    
+    
+    
+    <label>bairro</label>
+    <input type="text" name="bairro" id="bairro">
+    
+    
+    
+    <label>Naturalidade</label>
+    <select name="estado">
+            <option value="Rio de Janeiro">RJ</option>
+            <option value="sao paulo">SP</option>
+            <option value="Espirito Santo">ES</option>
+            <option value="Minas Gerais">MG</option>
+    
+    </select>
+    <label>cep</label>
+    <input type="number" name="número"onblur="pesquisacep(this.value);" /></label><br />
+    
+            
+    </form>
 
 
 <div id="rodape">
@@ -75,7 +165,7 @@
         <p>Bonsucesso - RJ</p>
         </div>
          
-         <div class="rodape2"> 
+         <div class="rodape4"> 
             <h3>Acesse Nossas Redes Sociais</h3>
             
                 <img src="imagens/insta.png">
@@ -85,9 +175,9 @@
                     <img src="imagens/face.jpg">
 
         </div>
-        <div class="rodape2">
+        <div class="rodape4">
             <h3>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.3364931132546!2d-43.258225024005945!3d-22.864024936345512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997c013902f0c3%3A0xa1ad7b4cb85e0ddb!2sSenac%20Bonsucesso!5e0!3m2!1spt-PT!2sbr!4v1760571674529!5m2!1spt-PT!2sbr" width="150" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.3364931132546!2d-43.258225024005945!3d-22.864024936345512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997c013902f0c3%3A0xa1ad7b4cb85e0ddb!2sSenac%20Bonsucesso!5e0!3m2!1spt-PT!2sbr!4v1760571674529!5m2!1spt-PT!2sbr" width="150" height="120" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </h3>
 
 
@@ -114,9 +204,10 @@
 
 
 
-
 </head>
 <body>
     
+        
+        
 </body>
 </html>
