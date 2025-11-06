@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <title>Document</title><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script>
     
         function limpa_formulário_cep() {
@@ -76,10 +77,16 @@
         };
     
         </script>
+
+
+
+</head>
+<body>
+
     <div id="container">
         <div id="titulo">
-    <h2>Restaurante SushiBom</h2>
-</div>
+             <h2>Restaurante SushiBom</h2>
+        </div>
      <div class="contatos1">
     <div id="menu">
     <nav>
@@ -92,122 +99,148 @@
     </nav>
  </div>
 </div>
-<form method="post">
-    
-    <label for="nome">Nome</label>
-    <input type="text" placeholder="Digite seu nome" name="nome" id="nome">
+
+<div class="container-fluid d">
+    <div class="row">
+    <div class="col-md-1">
+        
+        </div>
+        <div class="col-md-4 form-group">
+            <form method="post">
+
+            <label for="nome">Nome</label>
+    <input type="text" placeholder="Digite seu nome" name="nome" id="nome" class="form-control">
     
     
     
     <label>Rua</label>
-    <input type="text" placeholder="" name="nome" id="nome">
+    <input type="text" placeholder="" name="nome" id="nome" class="form-control">
     
     
     
     <label>Número</label>
-    <input type="number" name="número" id="número">
+    <input type="number" name="número" id="número" class="form-control">
     
     
     
     <label>Complemento</label>
-    <input type="text" name="Complemento" id="complementp">
+    <input type="text" name="Complemento" id="complemento" class="form-control">
     
     
     
     <label>Email</label>
-    <input type="email" name="email" id="email">
+    <input type="email" name="email" id="email" class="form-control">
     
     
     
-    <label>telefone</label>
-    <input type="text" name="text" id="telefone">
+    <label>Telefone</label>
+    <input type="text" name="text" id="telefone" class="form-control">
     
     
     
-    <label>bairro</label>
-    <input type="text" name="bairro" id="bairro">
+    <label>Bairro</label>
+    <input type="text" name="bairro" id="bairro" class="form-control">
     
     
     
     <label>Naturalidade</label>
-    <select name="estado">
+    <select name="estado" class="form-control">
             <option value="Rio de Janeiro">RJ</option>
             <option value="sao paulo">SP</option>
             <option value="Espirito Santo">ES</option>
             <option value="Minas Gerais">MG</option>
     
     </select>
-    <label>cep</label>
-    <input type="number" name="número"onblur="pesquisacep(this.value);" /></label><br />
+    <label>Cep</label>
+    <input type="text" class="form-control" name="número"onblur="pesquisacep(this.value);" /></label><br />
     
+           </form> 
             
-    </form>
-
-
-<div id="rodape">
-    <footer>
-        <div class="rodape2">
-            <nav>
-                <ul>
-                    <a href="index.html"><li>Home</li></a>
-                    <a href="historia.html"><li>História</li></a>
-                    <a href="produtos.html"><li>Produtos</li></a>
-                    <a href="contatos.html"><li>Contatos</li></a>
-                </ul>
-            </nav>
+        </div>
+        <div class="col-md-6">
+            <table id="tabela">
+                <tr>
+                    <th>Dias</th>
+                    <th>horários</th>
+                </tr>
+                <tr>
+                    <td>Segunda à Sexta</td>
+                    <td>9 as 22:00h</td>
+                </tr>
+                <tr>
+                    <td>Sábado</td>
+                    <td>9 as 18:00h</td>
+                </tr>
+                <tr>
+                    <td>Domingos e Feriados</td>
+                    <td>9 as 17:00h</td>
+                </tr>
         
+            </table>     
         </div>
-
-
-        <div class="rodape2">
-        <p>Conheça nossa loja</p>
-        <p>Rua Santa Dona Isabel, 700</p>
-        <p>Bonsucesso - RJ</p>
-        </div>
-         
-         <div class="rodape4"> 
-            <h3>Acesse Nossas Redes Sociais</h3>
+        <div class="col-md-1">
             
-                <img src="imagens/insta.png">
-            
-                <img src="imagens/whats.jpg">
-    
-                    <img src="imagens/face.jpg">
-
         </div>
-        <div class="rodape4">
-            <h3>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.3364931132546!2d-43.258225024005945!3d-22.864024936345512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997c013902f0c3%3A0xa1ad7b4cb85e0ddb!2sSenac%20Bonsucesso!5e0!3m2!1spt-PT!2sbr!4v1760571674529!5m2!1spt-PT!2sbr" width="150" height="120" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </h3>
+      </div>
+    </div>
 
-
-
-        </div>
-
-        <div id="rodape3">
-            <h4>Copyright 2025 - Todos os direitos reservados</h4>
-
-
-
-
-
-        </div>
-
+        <div id="rodape">
+            <footer>
+                <div class="rodape2">
+                    <nav>
+                        <ul>
+                            <a href="index.html"><li>Home</li></a>
+                            <a href="historia.html"><li>História</li></a>
+                            <a href="produtos.html"><li>Produtos</li></a>
+                            <a href="contatos.html"><li>Contatos</li></a>
+                        </ul>
+                    </nav>
+                
+                </div>
+        
+        
+                <div class="rodape2">
+                <p>Conheça nossa loja</p>
+                <p>Rua Santa Dona Isabel, 700</p>
+                <p>Bonsucesso - RJ</p>
+                </div>
+                 
+                 <div class="rodape4"> 
+                    <h3>Acesse Nossas Redes Sociais</h3>
                     
+                        <img src="imagens/insta.png">
+                    
+                        <img src="imagens/whats.jpg">
             
+                            <img src="imagens/face.jpg">
+        
+                </div>
+                <div class="rodape4">
+                    <h3>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.3364931132546!2d-43.258225024005945!3d-22.864024936345512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997c013902f0c3%3A0xa1ad7b4cb85e0ddb!2sSenac%20Bonsucesso!5e0!3m2!1spt-PT!2sbr!4v1760571674529!5m2!1spt-PT!2sbr" width="150" height="120" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </h3>
+        
+        
+        
+                </div>
+        
+                <div id="rodape3">
+                    <h4>Copyright 2025 - Todos os direitos reservados</h4>
+        
+        
+        
+        
+        
+                </div>
+        
+                            
+                    
+        
+        
+            </footer>
+        </div>
 
-
-    </footer>
 </div>
-<link rel="stylesheet" href="style.css">
 
-
-
-
-</head>
-<body>
-    
-        
-        
 </body>
 </html>

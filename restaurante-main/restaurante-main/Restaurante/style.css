@@ -145,6 +145,16 @@ body{
 .b{
     font-family:cursive;
 }
+#tabela{
+    border: solid 5px crimson;
+    background-color: rgb(238, 40, 40); 
+    color: white;
+    
+}
+
+#tabela th, #tabela td{
+    border: solid 2px coral;
+}
     
 
 
