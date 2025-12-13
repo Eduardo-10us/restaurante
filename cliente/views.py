@@ -2,11 +2,11 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
-from models import Cliente
+
 from django.http import HttpResponse
 from django.shortcuts import render
 
-from models import Cliente
+from .models import Cliente
 
 def cadastrar_cliente(request):
     if request.method == 'POST':
@@ -21,4 +21,5 @@ def cadastrar_cliente(request):
             f"<br>Email: {cliente.email}"
         )
     return render(request, 'cadastro_cliente.html')
+
 
