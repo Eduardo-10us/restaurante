@@ -20,5 +20,5 @@ from django.urls import path,include
 from produto.views import cadastrar_produto
 
 urlpatterns = [
-path('cadastrar_produto/', cadastrar_produto, name='cadastrar_produto')
+    path('cadastrar_produto/', cadastrar_produto, name='cadastrar_produto')
 ]
