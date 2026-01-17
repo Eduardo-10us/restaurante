@@ -7,3 +7,6 @@ def inicio(request):
 
 def historia(request):
     return render(request,'historia.html')
+
+def administrativo(request):
+    return render(request, 'menuadm.html')

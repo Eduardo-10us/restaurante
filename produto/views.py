@@ -5,7 +5,7 @@ from categoria.models import Categoria
 # Create your views here.
 from .models import Produto
 
-def cadastrar(request):
+def cadastrar_produto(request):
     categorias = Categoria.objects.all()
     if request.method == 'POST':
         nome = request.POST.get('nome')
@@ -19,10 +19,10 @@ def cadastrar(request):
             categoria = Categoria.objects.get(id=categoria_id)
             produto = Produto(nome=nome, descricao=descricao, imagem=imagem, valor=preco, quantidade=quantidade, categoria=categoria)
             produto.save()
-            return redirect('cadproduto.html')
+            return redirect('cadastrar_produto.html')
 
+    return render(request, 'cadastrar_produto.html', {'categorias': categorias})
 
-    return render(request, 'cadproduto.html', {'categorias': categorias})
 
 
 

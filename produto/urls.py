@@ -14,11 +14,12 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path,include
-
-from produto.views import cadastrar_produto
+from django.urls import path, include
+from .views import cadastrar_produto
 
 urlpatterns = [
-    path('cadastrar_produto/', cadastrar_produto, name='cadastrar_produto')
-]
+    path('cadastrar_produto/',cadastrar_produto, name='cadastrar_produto')
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
