@@ -1,8 +1,16 @@
 from django.db import models
 
 # Create your models here.
-class Cliente:
-    def __init__(self, nome, telefone, email):
-        self.nome = nome
-        self.telefone = telefone
-        self.email = email
+from django.db import models
+
+class Cliente(models.Model):
+    nome = models.CharField(max_length=100)
+    telefone = models.CharField(max_length=16)
+    email = models.EmailField()
+    cep= models.CharField(max_length=9)
+    numero = models.IntegerField()
+    compl = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.nome
+
