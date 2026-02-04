@@ -7,6 +7,7 @@ from categoria.models import Categoria
 
 
 class Produto(models.Model):
+    objects = None
     nome=models.CharField(max_length=100)
     descricao = models.TextField()
     imagem = models.ImageField(upload_to='produtos/')
