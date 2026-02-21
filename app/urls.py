@@ -22,4 +22,7 @@ urlpatterns = [
     path('', include('cliente.urls')),
     path('', include('produto.urls')),
     path('', include('principal.urls')),
+    path('', include('carrinho.urls')),
+
+
 ]

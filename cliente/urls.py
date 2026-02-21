@@ -18,8 +18,15 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
-from cliente.views import cadastro_cliente
+
+from cliente.views import cadastrar_cliente, busca_cep, logar
 
 urlpatterns = [
-   path('cadastro_cliente/', cadastro_cliente, name='cadastro_cliente')
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+   path('cadastrar_cliente/', cadastrar_cliente, name='cadastrar_cliente'),
+   path('busca_cep/', busca_cep, name='busca_cep'),
+   path('logar/',logar,name='logar'),
+
+]
+
+
+
