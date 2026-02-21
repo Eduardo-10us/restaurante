@@ -1,11 +1,11 @@
 {% extends 'home.html' %}
-{% block title %} Japonês - Sushi {% endblock %}
+{% block title %} Japonês - Temaki {% endblock %}
 
 {% block content %}
 
 <div class="container">
 
-<h2>Sushi's</h2>
+<h2>Temaki's</h2>
 
   <div class="row">
 {% for produto in produtos %}
@@ -17,7 +17,7 @@
     <h5 class="card-title">{{produto.nome}}</h5>
     <p class="card-text">{{produto.descricao}}</p>
     <p class="card-text">{{produto.valor}}</p>
-    <a href=" {% url 'addcarrinho' produto.id %}" class="btn btn-primary">Comprar</a>
+    <a href="#" class="btn btn-primary">Comprar</a>
    </div>
  </div>
 

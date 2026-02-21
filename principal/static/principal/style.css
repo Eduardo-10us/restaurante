@@ -1,5 +1,38 @@
-.capa img{
-     width:1000px;
-     height:600px;
-
+.capa {
+    display: flex;
+    justify-content: center;
 }
+
+.capa img {
+    max-width: 100%;
+    height: auto;
+}
+
+.rodape {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+
+
+
+body {
+    font-family: 'Noto Serif JP', serif;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+body {
+    background-color: #f7f3e9;
+    font-family: 'Noto Serif JP', serif;
+    color: #1c1c1c;
+}
+
+

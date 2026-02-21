@@ -1,14 +1,40 @@
 {% extends 'home.html' %}
+{% load static %}
 {% block title %} Japonês - História {% endblock %}
 
 {% block content %}
 
-<section class="conteiner my-5">
-    <h1>Nossa História</h1>
-    <p>
-        O SushiCesso nasceu de paixão pela culinária japonesa,
-        trazendo tradição, qualidade e inovação em cada prato.
-    </p>
+<section class="container my-5">
+    <h1 class="mb-4">Nossa História</h1>
+
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <p>
+                O <strong>SushiCesso</strong> nasceu da paixão pela culinária japonesa e do desejo
+                de oferecer uma experiência gastronômica única, unindo tradição, qualidade
+                e criatividade em cada prato.
+            </p>
+
+            <p>
+                Desde o início, nosso compromisso sempre foi utilizar ingredientes frescos,
+                técnicas refinadas e muito cuidado em cada detalhe, respeitando a essência
+                da cozinha japonesa, mas também trazendo toques contemporâneos que agradam
+                ao paladar brasileiro.
+            </p>
+
+            <p>
+                Mais do que um restaurante, o SushiCesso é um espaço para compartilhar momentos,
+                sabores e histórias, onde cada cliente é recebido com atenção e cada prato
+                é preparado com dedicação.
+            </p>
+        </div>
+
+        <div class="col-md-6 text-center">
+            <img src="{% static 'principal/imagens/restaurante.webp' %}"
+                 alt="História do SushiCesso"
+                 class="img-fluid rounded shadow">
+        </div>
+    </div>
 </section>
 
 {% endblock %}

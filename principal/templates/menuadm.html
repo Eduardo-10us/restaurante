@@ -14,6 +14,13 @@
   <body>
     <h1>SushiCesso</h1>
 
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
 
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -33,7 +40,7 @@
           Cadastros
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="{% url 'cadastro_cliente' %}">Clientes</a>
+          <a class="dropdown-item" href="{% url 'cadastrar_cliente' %}">Clientes</a>
           <a class="dropdown-item" href="{% url 'cadastrar_produto' %}">Produtos</a>
           <a class="dropdown-item" href="#">Pedidos</a>
         </div>
